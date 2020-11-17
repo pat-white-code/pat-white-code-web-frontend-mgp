@@ -53,11 +53,57 @@ const Info = styled.div`
   width: 100%;
   border: 1px red solid;
   display: flex;
+  align-items: center;
   flex-direction: column;
   font-size: 1em;
   li{
     line-height: 2em;
     font-size: 1.2em;
+  }
+`
+
+const Form = styled.div`
+  height: 40%;
+  width: 100%;
+  border: 1px red solid;
+  display: flex;
+  flex-direction: column;
+`
+
+const Button = styled.button`
+  height: 70px;
+  width: 80%;
+  // opacity: 0.5;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-style: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin: 10px;
+  transition: 200ms;
+  &:focus{
+    outline-style: none;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: darken($rgba(255, 255, 255, 0.5), 20%)
+  }
+  &.active{
+    background-color: orange;
+  }
+  &.actionButton{
+    background-color: $action-button;
+    height: 30px;
+    text-align: center;
+    justify-content: center;
+    font-size: 1em;
+    &:hover{
+      background-color: adjust-hue($action-button, 20deg)
+    }
   }
 `
 
@@ -87,12 +133,12 @@ const newUser = () => {
           </li>
         </ul>
       </Info>
-      <div>
-        <button>Annual</button>
-        <button>Monthly</button>
+      <Form>
+        <Button>Annual</Button>
+        <Button>Monthly</Button>
         <p>See Terms and conditions</p>
         <button>Start Free Trial</button>
-      </div>
+      </Form>
     </NewUser>
   )
 }
