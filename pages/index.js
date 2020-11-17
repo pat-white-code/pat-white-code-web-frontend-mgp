@@ -11,13 +11,15 @@ const NewUser = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  /* h1 {
+  h1 {
+    border: 1px red solid;
     color: white;
     letter-spacing: .4em;
+    text-align: center;
     animation-name: example;
-    animation-duration: 4s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
-  } */
+  }
   ul {
   list-style: none;
   }
@@ -30,7 +32,7 @@ const NewUser = styled.div`
   }
   @keyframes example {
   0% {letter-spacing: .4em}
-  50% {letter-spacing: 1em}
+  75% {letter-spacing: .7em}
   100% {letter-spacing: .4em}
 }
 `
@@ -115,7 +117,9 @@ const newUser = () => {
       <Banner>
         <img src='../static/img/j.svg'></img>
         <h1>
-          Jdarwish Fitness
+          Jdarwish 
+          <br />
+          Fitness
         </h1>
       </Banner>
       <Info>
