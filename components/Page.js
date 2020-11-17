@@ -7,7 +7,6 @@ class Page extends Component {
     return (
       <div>
         <Meta />
-        <Header />
         {this.props.children}
       </div>
     );
