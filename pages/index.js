@@ -12,7 +12,6 @@ const NewUser = styled.div`
   justify-content: flex-start;
   align-items: center;
   h1 {
-    border: 1px red solid;
     color: white;
     letter-spacing: .4em;
     text-align: center;
@@ -42,18 +41,16 @@ const Banner = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  border: 1px red solid;
   img {
-    height: 50%;
+    height: 40%;
     }
 `
 
 const Info = styled.div`
   height: 30%;
   width: 100%;
-  border: 1px red solid;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -67,7 +64,6 @@ const Info = styled.div`
 const Form = styled.div`
   height: 40%;
   width: 100%;
-  border: 1px red solid;
   display: flex;
   flex-direction: column;
   align-items: center;
