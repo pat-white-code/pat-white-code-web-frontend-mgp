@@ -9,23 +9,55 @@ const NewUser = styled.div`
   color: white;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  .header {
+  justify-content: flex-start;
+  align-items: center;
+  /* h1 {
     color: white;
     letter-spacing: .4em;
     animation-name: example;
     animation-duration: 4s;
     animation-fill-mode: forwards;
-  }
+  } */
   ul {
   list-style: none;
   }
   ul li:before {
-    content: '✓';
+    content: '✓  ';
   }
   @media screen and (min-width: 600px) {
     width:50%;
     background: $grey;
+  }
+  @keyframes example {
+  0% {letter-spacing: .4em}
+  50% {letter-spacing: 1em}
+  100% {letter-spacing: .4em}
+}
+`
+
+const Banner = styled.div`
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px red solid;
+  img {
+    height: 50%;
+    }
+`
+
+const Info = styled.div`
+  height: 30%;
+  width: 100%;
+  border: 1px red solid;
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  li{
+    line-height: 2em;
+    font-size: 1.2em;
   }
 `
 
@@ -33,23 +65,28 @@ const NewUser = styled.div`
 const newUser = () => {
   return(
     <NewUser>
-      <h1 className='header'>
-        Jdarwish Fitness
-      </h1>
-      <h2>
-        Full Access to all of my content
-      </h2>
-      <ul>
-        <li>
-          Unlock the full workout experience
-        </li>
-        <li>
-          Watch step by step video instruction
-        </li>
-        <li>
-          Track Your reps, weight and more
-        </li>
-      </ul>
+      <Banner>
+        <img src='../static/img/j.svg'></img>
+        <h1>
+          Jdarwish Fitness
+        </h1>
+      </Banner>
+      <Info>
+        <h2>
+          Full Access to all of my content
+        </h2>
+        <ul>
+          <li>
+            Unlock the full workout experience
+          </li>
+          <li>
+            Watch step by step video instruction
+          </li>
+          <li>
+            Track Your reps, weight and more
+          </li>
+        </ul>
+      </Info>
       <div>
         <button>Annual</button>
         <button>Monthly</button>
