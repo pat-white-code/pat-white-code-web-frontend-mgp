@@ -68,6 +68,7 @@ const Form = styled.div`
   border: 1px red solid;
   display: flex;
   flex-direction: column;
+  align-items: center;
 `
 
 const Button = styled.button`
@@ -90,19 +91,19 @@ const Button = styled.button`
   }
   &:hover {
     cursor: pointer;
-    background-color: darken($rgba(255, 255, 255, 0.5), 20%)
+    background-color:rgba(225, 225, 225, 0.5)
   }
   &.active{
     background-color: orange;
   }
   &.actionButton{
-    background-color: $action-button;
+    background-color: purple;
     height: 30px;
     text-align: center;
     justify-content: center;
     font-size: 1em;
     &:hover{
-      background-color: adjust-hue($action-button, 20deg)
+      background-color: adjustHue(purple, 20deg)
     }
   }
 `
@@ -137,7 +138,7 @@ const newUser = () => {
         <Button>Annual</Button>
         <Button>Monthly</Button>
         <p>See Terms and conditions</p>
-        <button>Start Free Trial</button>
+        <Button className='actionButton'>Start Free Trial</Button>
       </Form>
     </NewUser>
   )
