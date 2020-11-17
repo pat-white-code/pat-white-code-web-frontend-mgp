@@ -75,7 +75,7 @@ const Button = styled.button`
   // opacity: 0.5;
   border-radius: 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   color: white;
   background-color: rgba(255, 255, 255, 0.5);
